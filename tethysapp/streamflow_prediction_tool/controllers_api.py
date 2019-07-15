@@ -70,7 +70,7 @@ def get_ecmwf_forecast(request):
     startdate = forecast_statistics[stat].index[0]\
                                          .strftime('%Y-%m-%d %H:%M:%S')
     time_series = []
-    for date, value in forecast_statistics[stat].iteritems():
+    for date, value in forecast_statistics[stat].items():
         time_series.append({
             'date': date.strftime('%Y-%m-%dT%H:%M:%S'),
             'val': value
@@ -155,7 +155,7 @@ def get_historic_data(request):
     # return as WaterML 1.1
     startdate = qout_data.index[0].strftime('%Y-%m-%d %H:%M:%S')
     time_series = []
-    for date, value in qout_data.iteritems():
+    for date, value in qout_data.items():
         time_series.append({
             'date': date.strftime('%Y-%m-%dT%H:%M:%S'),
             'val': value

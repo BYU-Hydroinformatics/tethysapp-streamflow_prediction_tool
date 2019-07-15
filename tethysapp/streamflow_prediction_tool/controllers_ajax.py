@@ -665,7 +665,7 @@ def get_historic_data_csv(request):
     writer.writerow(['datetime', 'streamflow ({}3/s)'
                                  .format(get_units_title(units))])
 
-    for row_data in qout_data.iteritems():
+    for row_data in qout_data.items():
         writer.writerow(row_data)
 
     return response
